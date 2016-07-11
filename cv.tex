@@ -1,20 +1,12 @@
-%
 % LaTeX source of my resume
 % =========================
-%
 % Heavily commented to to fit even LaTeX beginners (hopefully).
-%
 % See the `README.md` file for more info.
-%
-% This file is licensed under the CC-NC-ND Creative Commons license.
-%
-
-
 % Start a document with the here given default font size and paper size.
-\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,letterpaper]{article}
 
 % Set the page margins.
-\usepackage[a4paper,margin=0.75in]{geometry}
+\usepackage[letterpaper ,margin=0.75in]{geometry}
 
 % Setup the language.
 \usepackage[english]{babel}
@@ -23,15 +15,25 @@
 % Makes resume-specific commands available.
 \usepackage{resume}
 
+% Provides social Icons
+\usepackage{fontawesome}
 
+% Proper Links
+\usepackage{hyperref}
+
+% Footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}
 
 
 \begin{document}  % begin the content of the document
 \sloppy  % this to relax whitespacing in favour of straight margins
 
-
 % title on top of the document
-\maintitle{Sawaiz Syed}{}{Last update on \today}
+\maintitle{\textsc{Sawaiz Syed}}{}{Last update on \today}
 
 \nobreakvspace{0.3em}  % add some page break averse vertical spacing
 
@@ -41,79 +43,53 @@
 % \href well..
 % \\ breaks the line into a new paragraph
 \noindent\href{mailto:sawaiz.at.sawaizsyed.dot.com}{sawaiz\mbox{}@\mbox{}sawaizsyed.com}\sbull
-678-457-2610\sbull
-%{sawaiz.syed} \emph{(Skype)}\sbull
-%\href{http://www.linkedin.com/in/sawaizsyed}{www.linkedin.com/in/sawaizsyed}
-%\\
+\href{tel:16784572610}{678-457-2610} \sbull
 190 Lembeth Ct.\sbull
-Alpharetta\sbull
-Gerogia \sbull
+Alpharetta, Georgia \sbull
 30004
 
-\spacedhrule{0.9em}{-0.4em}  % a horizontal line with some vertical spacing before and after
+\spacedhrule{0.2em}{-0.6em}  % a horizontal line with some vertical spacing before and after
 
-\roottitle{Work Experience}
+\roottitle{Relevant Work Experience}
 
 \headedsection  % sets the header for the section and includes any subsections
-  {\href{http://phynp6.phy-astr.gsu.edu/~phenix/new/home.html}{Georgia State University, Department of Physics}}
-  {\textsc{Atlanta, Georgia}} {%
+  {\href{http://phynp6.phy-astr.gsu.edu}{Georgia State University, Nuclear Physics Group}}
+  {\textsc{Atlanta, Georgia}} {
   \headedsubsection
-    {Hardware Developer}
+    {Lead Hardware Developer}
     {January 2014 -- present}
-    {\bodytext{Design a low power embedded system mesh to communicate 
-    with nodes and provide radiation readings for analysis. CAD layout 
-    and electronic design of high voltage and radio communication 
-    systems. Design for reducing cost of final product for production. 
-    Software development using C, C++. Create documentation for future 
-    users and development.}}
-}
-
-\headedsection  % sets the header for a subsection and contains usually body text
-  {\href{http://www.frys.com}{Fry's Electronics}}
-  {\textsc{Alpharetta, Georgia}} {%
-  \headedsubsection
-    {Sales Associate}
-    {December 2013 -- February 2014}
-    {\bodytext{Assisted customers with selection of electronic and 
-    computer component and tools, consumer and enterprise grade 
-    networking equipment based on their needs.}}
-}
-
-\headedsection
-  {\href{http://www.phy-astr.gsu.edu/new_web/index.html}{Georgia State University, Physics Department}}
-  {\textsc{Atlanta, Georgia}} {%
-
-  \headedsubsection
-    {Teaching Assistant for PHYS-1112K}
-    {February 2013 -- May 2013}
-    {\bodytext{Created challenge questions to check students' 
-    comprehension of physics concepts. Graded labs, tests and other 
-    assignments in a timely manner.}}
+    {\bodytext{Design, assemble, and test various projects for the nuclear physics group. Test rigs, harnesses, and improved readout for local tests and data collection for cosmic ray research. CAD layout and electronic design of high voltage, radio communication, high speed signal, and embedded systems. Design for reducing cost of final product for production. Frontend, backend, and embedded software development using C, C++, JavaScript. Source control (Git, \acr{CVS}). Create documentation for future users and development. Manage servers and computing recourses. Mentor and teach undergraduate physics students hardware skills. Manage and guide rest of hardware team, make critical design decisions. Take shift at RICH in PHENIX experiment at Brookhaven National Lab }
+    \textbf{Projects}
+    \begin{itemize}
+      \renewcommand\labelitemi{--}
+      \item \emph{\href{https://github.com/Sawaiz/mppcHighVoltage}{MPPC power supply}:}
+        Precision high voltage boost converter with SPI control coupled with 24-bit ADC for temperature and bias read-back providing closed loop control.
+      \item \emph{\href{https://github.com/Sawaiz/mppcSensor}{MPPC sensor boards}:}
+        Small (25mm $\times$ 7mm) high speed (500Mhz-10Ghz) pre-amplifying and mounting assembly. Interfaced with Cat-5 cable providing power, signal, temperature, and test led control.
+      \item \emph{\href{https://github.com/Sawaiz/mppcInterface}{MPPC Interface}:}
+        Provides power, bias voltage, and other slow control along with high speed signal routing for 8 sensor boards. Multiple boards can be added to a backplane and controlled through a web interface.
+      \item \emph{\href{https://github.com/Sawaiz/scintillatorPanel}{Scintillator Panel}:}
+        Plastic scintillator sheets milled, and embedded with wavelength shifting fiber optic for improved light collection efficiency.
+      \item \emph{\href{https://github.com/Sawaiz/wirelessGeigerCounter}{Wireless Geiger Counter}:}
+        IoT based low cost and power data logging Geiger tube wand based around the ESP-8266. Able to log data locally, or transmit to remote database. Designed for monitoring, surveying, and education.
+      \item \emph{\href{https://github.com/Sawaiz/modularRICH}{mRICH}:}
+        Modular ring imaging Cherenkov detector (RICH) for the electron ion collider (EIC) project. Provides differentiation between $\pi^\pm$ and $K^\pm$ particles from collisions. First prototype Fermilab Beam-Test April 2016.
+      \item \emph{\href{https://github.com/Sawaiz/coincidenceCounter}{Coincidence Counter}:}
+        High speed (ns) signal readout, replacing KMEC crate modules with embedded systems for cosmic ray detection and logging.
+      \item \emph{\href{https://github.com/Sawaiz/modularHodoscope}{Finger Hodoscope}:}
+        Finger scintillators with embedded fibers coupled to MPPC sensors providing position and angle of charged particles. Used for cosmic ray measurements, beamtest, muon tomography.
+    \end{itemize}
+    }
 }
 
 \headedsection
-  {\href{http://www.roswelltelemetry.com}{Roswell Telemetry}}
+  {\href{http://web.archive.org/web/20111024221117/http://www.roswelltelemetry.com/}{Roswell Telemetry}}
   {\textsc{Roswell, Georgia}} {%
   \headedsubsection
-    {Embedded Systems Programmer \& Electrical Engineer}
+    {Embedded System Programmer \& Electrical Engineer}
     {February 2012 -- September 2012}
-    {\bodytext{Port Atmel \href{http://www.microsoft.com/net/multiple-platform-support}{.Net Micorframework}
-     for over the air reprogramming. Constructed 
-	and maintained prototyping equipment including an aluminum forge and a 3D 
-	printer. QC and Debug failed hardware. Research materials for future 
-	improvement of products. Produced and tested field electronics.}}
+    {\bodytext{Port Atmel \href{http://www.microsoft.com/net/multiple-platform-support}{.Net Micorframework} for over the air reprogramming. Constructed and maintained prototyping equipment including an aluminum forge and a 3D	printer. QC and Debug failed hardware. Research materials for future improvement of products. Produced and tested field electronics for parking sensors and relay stations.}}
 }
-
-\headedsection
-  {\href{https://www.kroger.com/}{Kroger Company}}
-  {\textsc{Alpharetta, Georgia}} {%
-  \headedsubsection
-    {Courtesy Clerk}
-    {June 2010 -- January 2011}
-    {\bodytext{Managed front-end supplies and replenished as needed. 
-    Maintained clean and safe environment as required by standards.}}
-}
-
 
 \spacedhrule{0.2em}{-0.4em}
 
@@ -123,17 +99,9 @@ Gerogia \sbull
   {\href{http://www.gsu.edu}{Georgia State University}}
   {\textsc{Atlanta, Georgia}} {%
   \headedsubsection
-    {Bachelor of Science, Physics \& Computer Science}
-    {Expected Graduation 2015}
+    {Bachelor of Science, Physics}
+    {2015}
     {}
-}
-
-\headedsection
-  {\href{http://school.fultonschools.org/hs/alpharetta/pages/default.aspx}{Alpharetta High School}}
-  {\textsc{Alpharetta, Georgia}} {%
-  \headedsubsection
-    {Dual Diploma: College Prep \& Engineering}
-    {Spring 2011} {}
 }
 
 \spacedhrule{0.5em}{-0.4em}
@@ -142,18 +110,57 @@ Gerogia \sbull
 
 \inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
   {Technical:}
-  {Electronics Design and prototyping, Circuit Design, Soldering, PCB Layout  (\href{http://diptrace.com/}{DipTrace}, \href{http://www.cadsoftusa.com/}{Eagle CAD}), Embedded Systems (\href{http://www.atmel.com/}{Atmel}, \href{http://www.arduino.cc/}{Arduino}), Workstation, server and network management and construction, Robotics, \href{http://en.wikipedia.org/wiki/Numerical_control}{CNC} milling/cutting/printing, Remote Control and autonomous flight, Molding and Casting, Photography and Filmography.
+  {Electronics Design and prototyping,
+   Circuit Design, Soldering,
+   Schematic Capture/PCB Layout
+    (\href{http://diptrace.com/}{DipTrace},
+    \href{http://www.cadsoftusa.com/}{Eagle CAD}),
+   Embedded Systems
+    (\href{http://www.atmel.com/}{Atmel},
+    \href{http://www.arduino.cc/}{Arduino},
+    \href{https://espressif.com/}{Espressif}),
+   FPGA
+    (\href{http://www.xilinx.com/products/silicon-devices/fpga/spartan-6.html}{Spartan-6}),
+   Server and network management and construction,
+   Robotics,
+   \href{http://en.wikipedia.org/wiki/Numerical_control}{CNC} milling/cutting/printing,
+   Remote Control and autonomous flight,
+   Molding and Casting,
+   Photography and Filmography.
   }
   \vspace{0.5em}
   \inlineheadsection
   {Programming:}
-  {C, C++, Java, Python, \acr{XML}, \acr{SQL}, Android SDK, \href{http://en.wikipedia.org/wiki/G-code}{G-Code}, \href{http://www.latex-project.org}{\LaTeX}, \href{http://www.povray.org/}{POV-Ray}, \acr{FTP}, \acr{GIT}, \acr{SVN}.
+  {C,
+   C++,
+   Web Front/Backend(HTML, CSS, Javascript, Node JS, \href{https://www.docker.com/}{Docker}),
+   Java,
+   Shell,
+   \href{https://www.gnu.org/software/make/}{make},
+   \acr{HDL},
+   Python,
+   \acr{SQL},
+   Android SDK,
+   \href{http://en.wikipedia.org/wiki/G-code}{G-Code},
+   \href{http://www.latex-project.org}{\LaTeX}.
   }
     \vspace{0.5em}
   \inlineheadsection
   {Software Packages:}
-  {\href{http://www.autodesk.com/}{Autodesk Suite}, \href{http://www.adobe.com/}{Adobe Suite}, \href{http://www.cadsoftusa.com/}{Eagle}, \href{http://www.blender.org/}{Blender}, \href{https://www.eclipse.org/}{Eclipse}, \href{http://www.jetbrains.com/idea/}{Intellij IDEA}, \href{http://audacity.sourceforge.net/}{Audacity}, \href{http://www.sketchup.com/}{SketchUp}, \href{http://www.solidworks.com/}{Solidworks} MS Office Suite, \href{http://en.wikipedia.org/wiki/Computer-aided_manufacturing}{CAM}, Linux/Unix.}
-  
+  {\href{http://www.autodesk.com/}{Autodesk Suite},
+   \href{http://www.adobe.com/}{Adobe Suite},
+   \href{http://diptrace.com/}{DipTrace},
+   \href{http://www.cadsoftusa.com/}{Eagle},
+   \href{http://www.blender.org/}{Blender},
+   \href{https://www.eclipse.org/}{Eclipse},
+   \href{http://www.jetbrains.com/idea/}{Intellij IDEA},
+   \href{http://audacity.sourceforge.net/}{Audacity},
+   \href{http://www.sketchup.com/}{SketchUp},
+   \href{http://www.solidworks.com/}{Solidworks},
+   MS Office Suite,
+   \href{http://en.wikipedia.org/wiki/Computer-aided_manufacturing}{CAM},
+   Linux/Unix.}
+
 \vspace{0.5em}
 \inlineheadsection
   {Natural languages:}
@@ -162,16 +169,23 @@ Gerogia \sbull
 \spacedhrule{1.6em}{-0.4em}
 
 \roottitle{Achievements}
-  {\href{https://www.citiprogram.org/}{\acr{CITI}} Responsible Conduct of Research certification, \acr{AP} Scholar with Distinction (6 Exams), 1\textsuperscript{st} place \href{http://www.gatechfair.org/}{Georgia Technology Fair} in Robotics with \href{http://www.centricsit.com/}{Centrics IT} scholarship (2010).}
-  
+  {Fermilab (+TLD Dosmitery etc.), Brookhaven Ntainal Lab\href{https://www.citiprogram.org/}{\acr{CITI}} Responsible Conduct of Research certification,  1\textsuperscript{st} place \href{http://www.gatechfair.org/}{Georgia Technology Fair} in Robotics with \href{http://www.centricsit.com/}{Centrics IT} scholarship (2010).}
+
 \spacedhrule{0.2em}{-0.4em}
-  
+
 \roottitle{Organizations}
-	{Society of Physics Students (Treasurer), Science Olympiad (Lead Engineer), National Science Honor Society, Science Olympiad Judging -- 62 Hours , Recycling Club -- 60 Hours, SPS Tutoring -- 20 Hours}
+	{PHENIX Society of Physics Students (Vice President/Treasurer), Science Olympiad (Lead Engineer), National Science Honor Society, Science Olympiad Judging -- 62 Hours , Recycling Club -- 60 Hours, SPS Tutoring -- 80 Hours}
 
 \spacedhrule{0.2em}{-0.4em}
 
 \roottitle{Relevant Experiences}
-{Designing and building wireless 40W laser cutter (85\% complete). Have built, tested, and placed into production three 3D printers (\href{http://reprap.org/wiki/MendelMax}{Mendel Max}, \href{http://reprap.org/wiki/Mendel}{Mendel}, \href{http://reprap.org/wiki/Kossel}{Kossel Mini}). Hardware development for \href{http://reprap.org/wiki/RepRap}{Rep-Rap} project. Setup and manage home networking and media, data, and backup servers hosted on domain.}
+{Designing and building wireless 40W laser cutter (85\% complete). Have built, tested, and placed into production four 3D printers (\href{http://reprap.org/wiki/MendelMax}{Mendel Max}, \href{http://reprap.org/wiki/Mendel}{Mendel}, \href{http://reprap.org/wiki/Kossel}{Kossel Mini}). Hardware development for \href{http://reprap.org/wiki/RepRap}{Rep-Rap} project. Setup and manage home networking and media, data, and backup servers hosted on domain. Contribute to open source projects.}
+
+\cfoot{
+\sbull \,
+\href{https://github.com/Sawaiz/}{\faGithub \, sawaiz} \sbull \,
+\href{skype:sawaiz.syed?userinfo}{\faSkype \, sawaiz.syed} \sbull \,
+\href{http://www.linkedin.com/in/sawaizsyed}{\faLinkedin \, sawaizsyed} \sbull
+}
 
 \end{document}
