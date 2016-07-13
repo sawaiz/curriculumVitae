@@ -28,12 +28,11 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{1pt}
 
-
 \begin{document}  % begin the content of the document
 \sloppy  % this to relax whitespacing in favour of straight margins
 
 % title on top of the document
-\maintitle{\textsc{Sawaiz Syed}}{}{Last update on \today}
+\maintitle{Sawaiz Syed}{}{Last update on \today}
 
 \nobreakvspace{0.3em}  % add some page break averse vertical spacing
 
@@ -58,7 +57,7 @@ Alpharetta, Georgia \sbull
   \headedsubsection
     {Lead Hardware Developer}
     {January 2014 -- present}
-    {\bodytext{Design, assemble, and test various projects for the nuclear physics group. Test rigs, harnesses, and improved readout for local tests and data collection for cosmic ray research. CAD layout and electronic design of high voltage, radio communication, high speed signal, and embedded systems. Design for reducing cost of final product for production. Frontend, backend, and embedded software development using C, C++, JavaScript. Source control (Git, \acr{CVS}). Create documentation for future users and development. Manage servers and computing recourses. Mentor and teach undergraduate physics students hardware skills. Manage and guide rest of hardware team, make critical design decisions. Take shift at RICH in PHENIX experiment at Brookhaven National Lab }
+    {\bodytext{Design for prototype and manufacture, assemble, and test hardware (EE, layout, and 3D CAD for HV, RF, High-Speed, microcontroller circuits) and software (web stack and embedded development using C, C++, JS with source control (Git, \acr{CVS})) with documentation. Manage servers and computing recourses (Scientific, Debian, Centos, Arch). Mentor and teach undergraduate physics students hardware skills. Direct hardware team, make critical design decisions. Take shift at PHENIX, and beamtests. }
     \textbf{Projects}
     \begin{itemize}
       \renewcommand\labelitemi{--}
@@ -71,9 +70,9 @@ Alpharetta, Georgia \sbull
       \item \emph{\href{https://github.com/Sawaiz/scintillatorPanel}{Scintillator Panel}:}
         Plastic scintillator sheets milled, and embedded with wavelength shifting fiber optic for improved light collection efficiency.
       \item \emph{\href{https://github.com/Sawaiz/wirelessGeigerCounter}{Wireless Geiger Counter}:}
-        IoT based low cost and power data logging Geiger tube wand based around the ESP-8266. Able to log data locally, or transmit to remote database. Designed for monitoring, surveying, and education.
+        IoT based low cost and power data logging Geiger wand based around the ESP-8266. Logs data locally, or transmits to remote database for radiation monitoring and education.
       \item \emph{\href{https://github.com/Sawaiz/modularRICH}{mRICH}:}
-        Modular ring imaging Cherenkov detector (RICH) for the electron ion collider (EIC) project. Provides differentiation between $\pi^\pm$ and $K^\pm$ particles from collisions. First prototype Fermilab Beam-Test April 2016.
+        Modular ring imaging Cherenkov detector for the electron ion collider (EIC) project. Provides differentiation between $\pi^\pm$ and $K^\pm$ particles from collisions. Prototype beamtest, Fermilab April 2016.
       \item \emph{\href{https://github.com/Sawaiz/coincidenceCounter}{Coincidence Counter}:}
         High speed (ns) signal readout, replacing KMEC crate modules with embedded systems for cosmic ray detection and logging.
       \item \emph{\href{https://github.com/Sawaiz/modularHodoscope}{Finger Hodoscope}:}
@@ -93,8 +92,17 @@ Alpharetta, Georgia \sbull
 
 \spacedhrule{0.2em}{-0.4em}
 
-\roottitle{Education}
+\roottitle{Affiliations}
+  {\href{http://phynp6.phy-astr.gsu.edu/}{GSU Nuclear Physics Group},
+  \href{https://www.phenix.bnl.gov/}{PHENIX}/sPHENIX,
+  eRD14 PID Consortium,
+  \href{https://www.bnl.gov/}{Brookhaven National Laboratory} (GERT, Collider User Training)
+  \href{http://www.fnal.gov/}{Fermi National Accelerator Laboratory} (GERT, Controlled Access, Radiological Worker).
+  }
 
+  \spacedhrule{0.2em}{-0.4em}
+
+\roottitle{Education}
 \headedsection
   {\href{http://www.gsu.edu}{Georgia State University}}
   {\textsc{Atlanta, Georgia}} {%
@@ -110,8 +118,9 @@ Alpharetta, Georgia \sbull
 
 \inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
   {Technical:}
-  {Electronics Design and prototyping,
-   Circuit Design, Soldering,
+  {Electronics design and prototyping,
+   Circuit Design,
+   Soldering (to 0201),
    Schematic Capture/PCB Layout
     (\href{http://diptrace.com/}{DipTrace},
     \href{http://www.cadsoftusa.com/}{Eagle CAD}),
@@ -122,13 +131,12 @@ Alpharetta, Georgia \sbull
    FPGA
     (\href{http://www.xilinx.com/products/silicon-devices/fpga/spartan-6.html}{Spartan-6}),
    Server and network management and construction,
-   Robotics,
    \href{http://en.wikipedia.org/wiki/Numerical_control}{CNC} milling/cutting/printing,
    Remote Control and autonomous flight,
    Molding and Casting,
    Photography and Filmography.
   }
-  \vspace{0.5em}
+  \vspace{0.3em}
   \inlineheadsection
   {Programming:}
   {C,
@@ -144,7 +152,7 @@ Alpharetta, Georgia \sbull
    \href{http://en.wikipedia.org/wiki/G-code}{G-Code},
    \href{http://www.latex-project.org}{\LaTeX}.
   }
-    \vspace{0.5em}
+    \vspace{0.3em}
   \inlineheadsection
   {Software Packages:}
   {\href{http://www.autodesk.com/}{Autodesk Suite},
@@ -159,28 +167,13 @@ Alpharetta, Georgia \sbull
    \href{http://en.wikipedia.org/wiki/Computer-aided_manufacturing}{CAM},
    Linux/Unix.}
 
-\vspace{0.5em}
+\vspace{0.3em}
 \inlineheadsection
   {Natural languages:}
   {English,
    Urdu \emph{(mother tongue)},
    French \emph{(elementary level)}
   }
-
-\spacedhrule{1.6em}{-0.4em}
-
-\roottitle{Affiliations}
-  {\href{http://phynp6.phy-astr.gsu.edu/}{GSU Nuclear Physics Group},
-  \href{https://www.phenix.bnl.gov/}{PHENIX}/sPHENIX,
-  eRD14 PID Consortium,
-  \href{https://www.bnl.gov/}{Brookhaven National Laboratory} (GERT, Collider User Training)
-  \href{http://www.fnal.gov/}{Fermi National Accelerator Laboratory} (GERT, Controlled Access, Radiological Worker).
-  }
-
-\spacedhrule{0.2em}{-0.4em}
-
-\roottitle{Relevant Experiences}
-{Designing and building wireless 40W laser cutter (85\% complete). Have built, tested, and placed into production four 3D printers (\href{http://reprap.org/wiki/MendelMax}{Mendel Max}, \href{http://reprap.org/wiki/Mendel}{Mendel}, \href{http://reprap.org/wiki/Kossel}{Kossel Mini}). Hardware development for \href{http://reprap.org/wiki/RepRap}{Rep-Rap} project. Setup and manage home networking and media, data, and backup servers hosted on domain. Contribute to open source projects.}
 
 \cfoot{
 \sbull \,
