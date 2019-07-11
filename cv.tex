@@ -42,138 +42,46 @@
 % \href well..
 % \\ breaks the line into a new paragraph
 \noindent\href{mailto:sawaiz.at.sawaizsyed.dot.com}{sawaiz\mbox{}@\mbox{}sawaizsyed.com}\sbull
-\href{tel:16784572610}{678-457-2610} \sbull
-190 Lembeth Ct.\sbull
-Alpharetta, Georgia \sbull
-30004
+\href{tel:16784572610}{+1 678-457-2610} \sbull
+Badensche Straße 40\sbull
+Berlin, Germany \sbull
+10715
 
 \spacedhrule{0.2em}{-0.6em}  % a horizontal line with some vertical spacing before and after
 
 \roottitle{Relevant Work Experience}
 
-\headedsection  % sets the header for the section and includes any subsections
-  {\href{http://phynp6.phy-astr.gsu.edu}{Georgia State University, Nuclear Physics Group}}
-  {\textsc{Atlanta, Georgia}} {
-  \headedsubsection
-    {Lead Hardware Developer}
-    {January 2014 -- present}
-    {\bodytext{Design hardware (EE, layout, and 3D CAD for HV, RF, High-Speed, microcontroller circuits) for manufacture and produce relevant software (web stack and embedded development using C, C++, JS with source control) and documentation. Manage computing recourses (Scientific Linux, Debian, Centos, Arch). Mentor and teach undergraduate physics students at GSU. Manage internal hardware team, and represent group on site at  at PHENIX, and beamtests. }
-    \textbf{Projects}
-    \begin{itemize}
-      \renewcommand\labelitemi{--}
-      \item \emph{\href{https://github.com/Sawaiz/mppcHighVoltage}{MPPC power supply}:}
-        Precision high voltage boost converter with SPI control coupled with 24-bit ADC for temperature and bias read-back providing closed loop control.
-      \item \emph{\href{https://github.com/Sawaiz/mppcSensor}{MPPC sensor boards}:}
-        Small (25mm $\times$ 7mm) high speed (500Mhz-10Ghz) pre-amplifying and mounting assembly. Interfaced with Cat-5 cable providing power, signal, temperature, and test led control.
-      \item \emph{\href{https://github.com/Sawaiz/mppcInterface}{MPPC Interface}:}
-        Provides power, bias voltage, and other slow control along with high speed signal routing for 8 sensor boards. Multiple boards can be added to a backplane and controlled through a web interface.
-      \item \emph{\href{https://github.com/Sawaiz/scintillatorPanel}{Scintillator Panel}:}
-        Plastic scintillator sheets milled, and embedded with wavelength shifting fiber optic for improved light collection efficiency.
-      \item \emph{\href{https://github.com/Sawaiz/wirelessGeigerCounter}{Wireless Geiger Counter}:}
-        IoT based low cost and power data logging Geiger wand based around the ESP-8266. Logs data locally, or transmits to remote database for radiation monitoring and education.
-      \item \emph{\href{https://github.com/Sawaiz/modularRICH}{mRICH}:}
-        Modular ring imaging Cherenkov detector for the electron ion collider (EIC) project. Provides differentiation between $\pi^\pm$ and $K^\pm$ particles from collisions. Prototype beamtest, Fermilab April 2016.
-      \item \emph{\href{https://github.com/Sawaiz/coincidenceCounter}{Coincidence Counter}:}
-        High speed (ns) signal readout, replacing KMEC crate modules with embedded systems for cosmic ray detection and logging.
-      \item \emph{\href{https://github.com/Sawaiz/modularHodoscope}{Finger Hodoscope}:}
-        Finger scintillators with embedded fibers coupled to MPPC sensors providing position and angle of charged particles. Used for cosmic ray measurements, beamtest, muon tomography.
-    \end{itemize}
-    }
-}
-
-\headedsection
-  {\href{http://web.archive.org/web/20111024221117/http://www.roswelltelemetry.com/}{Roswell Telemetry}}
-  {\textsc{Roswell, Georgia}} {%
-  \headedsubsection
-    {Embedded System Programmer \& Electrical Engineer}
-    {February 2012 -- September 2012}
-    {\bodytext{Port Atmel \href{http://www.microsoft.com/net/multiple-platform-support}{.Net Micorframework} for over the air reprogramming. Constructed and maintained prototyping equipment including an aluminum forge and a 3D	printer. QC and Debug failed hardware. Research materials for future improvement of products. Produced and tested field electronics for parking sensors and relay stations.}}
-}
+\input{work/smartWins}
+\input{work/gsu}
+\input{work/roswellTelemetry}
 
 \spacedhrule{0.2em}{-0.4em}
 
 \roottitle{Affiliations}
-  {\href{http://phynp6.phy-astr.gsu.edu/}{GSU Nuclear Physics Group},
-  \href{https://www.phenix.bnl.gov/}{PHENIX}/sPHENIX,
-  eRD14 PID Consortium,
-  \href{https://www.bnl.gov/}{Brookhaven National Laboratory} (GERT, Collider User Training)
-  \href{http://www.fnal.gov/}{Fermi National Accelerator Laboratory} (GERT, Controlled Access, Radiological Worker).
-  }
-
-  \spacedhrule{0.2em}{-0.4em}
+\input{affiliations/gsuNPG}\unskip, 
+\input{affiliations/phenix}\unskip, 
+\input{affiliations/eRD14-PID}\unskip, 
+\input{affiliations/bnl}\unskip, 
+\input{affiliations/fnal}\unskip.
+\spacedhrule{0.2em}{-0.4em}
 
 \roottitle{Education}
-\headedsection
-  {\href{http://www.gsu.edu}{Georgia State University}}
-  {\textsc{Atlanta, Georgia}} {%
-  \headedsubsection
-    {Bachelor of Science, Physics}
-    {2015}
-    {}
-}
+\input{education/gsu}
 
 \spacedhrule{0.5em}{-0.4em}
 
+\roottitle{Selected Publications}
+\input{publications/designRICH-2017.tex}
+\input{publications/mRICH-2017.tex}
+
+\spacedhrule{0.5em}{-0.4em}
+
+
 \roottitle{Skills}
-
-\inlineheadsection  % special section that has an inline header with a 'hanging' paragraph
-  {Technical:}
-  {Electronics design and prototyping,
-   Circuit Design,
-   Soldering (to 0201),
-   Schematic Capture/PCB Layout
-    (\href{http://diptrace.com/}{DipTrace},
-    \href{http://www.cadsoftusa.com/}{Eagle CAD}),
-   Embedded Systems
-    (\href{http://www.atmel.com/}{Atmel},
-    \href{http://www.arduino.cc/}{Arduino},
-    \href{https://espressif.com/}{Espressif}),
-   FPGA
-    (\href{http://www.xilinx.com/products/silicon-devices/fpga/spartan-6.html}{Spartan-6}),
-   Server and network management and construction,
-   \href{http://en.wikipedia.org/wiki/Numerical_control}{CNC} milling/cutting/printing,
-   Remote Control and autonomous flight,
-   Molding and Casting,
-   Photography and Filmography.
-  }
-  \vspace{0.3em}
-  \inlineheadsection
-  {Programming:}
-  {C,
-   C++,
-   Web Front/Backend(HTML, CSS, JavaScript, Node JS, \href{https://www.docker.com/}{Docker}),
-   Java,
-   Shell,
-   \href{https://www.gnu.org/software/make/}{make},
-   \acr{HDL},
-   Python,
-   \acr{SQL},
-   Android SDK,
-   \href{http://en.wikipedia.org/wiki/G-code}{G-Code},
-   \href{http://www.latex-project.org}{\LaTeX}.
-  }
-    \vspace{0.3em}
-  \inlineheadsection
-  {Software Packages:}
-  {\href{http://www.autodesk.com/}{Autodesk Suite},
-   \href{http://www.adobe.com/}{Adobe Suite},
-   \href{http://www.blender.org/}{Blender},
-   \href{https://www.eclipse.org/}{Eclipse},
-   \href{http://www.jetbrains.com/idea/}{Intellij IDEA},
-   \href{http://audacity.sourceforge.net/}{Audacity},
-   \href{http://www.sketchup.com/}{SketchUp},
-   \href{http://www.solidworks.com/}{Solidworks},
-   MS Office Suite,
-   \href{http://en.wikipedia.org/wiki/Computer-aided_manufacturing}{CAM},
-   Linux/Unix.}
-
-\vspace{0.3em}
-\inlineheadsection
-  {Natural languages:}
-  {English,
-   Urdu \emph{(mother tongue)},
-   French \emph{(elementary level)}
-  }
+\input{skills/technical}
+\input{skills/programing}
+\input{skills/softwarePackages}
+\input{skills/naturalLanguages}
 
 \cfoot{
 \sbull \,
