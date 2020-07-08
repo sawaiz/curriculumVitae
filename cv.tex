@@ -15,11 +15,11 @@
 % Makes resume-specific commands available.
 \usepackage{resume}
 
-% Provides social Icons
-\usepackage{fontawesome}
-
 % Proper Links
 \usepackage{hyperref}
+
+% Images
+\usepackage{graphicx}
 
 % Footer
 \usepackage{fancyhdr}
@@ -51,6 +51,7 @@ Berlin, Germany \sbull
 
 \roottitle{Relevant Work Experience}
 
+\input{work/kolibri}
 \input{work/smartWins}
 \input{work/gsu}
 \input{work/roswellTelemetry}
@@ -79,16 +80,16 @@ Berlin, Germany \sbull
 
 \roottitle{Skills}
 \input{skills/technical}
-\input{skills/programing}
+\input{skills/programming}
 \input{skills/softwarePackages}
 \input{skills/naturalLanguages}
 
 \cfoot{
 \sbull \,
-\href{http://sawaizsyed.com/}{\faUser \, sawaizsyed.com} \sbull \,
-\href{https://github.com/Sawaiz/}{\faGithub \, sawaiz} \sbull \,
-\href{skype:sawaiz.syed?userinfo}{\faSkype \, sawaiz.syed} \sbull \,
-\href{http://www.linkedin.com/in/sawaizsyed}{\faLinkedin \, sawaizsyed} \sbull
+\href{http://sawaizsyed.com/}{> \, sawaizsyed.com} \sbull \,
+\href{https://github.com/Sawaiz/}{\includegraphics[height=0.75em]{icons/github.png} \, sawaiz} \sbull \,
+\href{skype:sawaiz.syed?userinfo}{\includegraphics[height=0.75em]{icons/skype.png} \, sawaiz.syed} \sbull \,
+\href{http://www.linkedin.com/in/sawaizsyed}{\includegraphics[height=0.75em]{icons/linkedin.png} \, sawaizsyed} \sbull
 }
 
 \end{document}
